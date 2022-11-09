@@ -8,7 +8,7 @@ import NavBar from "./components/navbar";
 import Rentals from "./components/rentals";
 import NotFound from "./components/notFound";
 import MovieForm from "./components/movieForm";
-import LoginForm from "./components/login";
+import LoginForm from "./components/loginForm";
 import RegisterForm from "./components/registerForm";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,7 +20,7 @@ class App extends Component {
     try {
       const jwt = localStorage.getItem("token");
       const user = jwtDecode(jwt);
-      this.setStatelog({ user });
+      this.setState({ user });
     } catch (error) {}
   }
   render() {
