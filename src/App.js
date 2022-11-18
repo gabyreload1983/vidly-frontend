@@ -11,9 +11,9 @@ import LoginForm from "./components/loginForm";
 import RegisterForm from "./components/registerForm";
 import Logout from "./components/logout";
 import PortectedRoute from "./components/common/protectedRoute";
-import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { getCurrentUser } from "./services/authService";
+import Profile from "./components/profile";
 
 class App extends Component {
   state = {};
@@ -40,6 +40,7 @@ class App extends Component {
             />
             <Route path="/customers" component={Customers} />
             <Route path="/rentals" component={Rentals} />
+            <Route path="/profile" component={Profile} />
             <Route path="/not-found" component={NotFound} />
             <Redirect from="/" exact to="/movies" />
             <Redirect to="/not-found" />

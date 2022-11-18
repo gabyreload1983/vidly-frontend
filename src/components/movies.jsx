@@ -100,14 +100,14 @@ class Movies extends Component {
 
     return (
       <div className="row mt-5">
-        <div className="col-2">
+        <div className="col-12 col-lg-2 mb-3">
           <ListGroup
             items={this.state.genres}
             selectedItem={this.state.selectedGenre}
             onItemSelect={this.handleGenreSelect}
           />
         </div>
-        <div className="col">
+        <div className="col-12 col-lg-10">
           {user && (
             <Link to="/movies/new" className="btn btn-primary mb-3">
               New Movie
